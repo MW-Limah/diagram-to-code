@@ -1,10 +1,17 @@
 from datetime import date
+from .pessoa import Pessoa
 
-class Cliente:
 
-    # Atributos
-    def __init__(self, data_cadastro = date, valor_aberto = str) -> None:
+class Cliente(Pessoa):
+    """Representa um cliente."""
+
+    def __init__(self, codigo: int, nome: str, data_nascimento: date, identidade: str, data_cadastro: date, valor_em_aberto: float) -> None:
+        super().__init__(codigo, nome, data_nascimento, identidade)
         self.data_cadastro = data_cadastro
-        self.valor_aberto = valor_aberto
+        self.valor_em_aberto = valor_em_aberto
 
-        # Métodos necessários = TiraExtrato(), EfetuarPagamento() 
+    def tira_extrato(self) -> None:
+        raise NotImplementedError("Método ainda não implementado")
+
+    def efetuar_pagamento(self) -> None:
+        raise NotImplementedError("Método ainda não implementado")
