@@ -1,9 +1,9 @@
 from datetime import date
 from .produto import Produto
 from .fornecedor import Fornecedor
+from .base import Base
 
-
-class Compra:
+class Compra (Base):
     """Representa uma compra."""
 
     def __init__(self, cod_compra: int, nota_fiscal_compra: str, produto: Produto, qtd_compra: int, fornecedor: Fornecedor, data_compra: date) -> None:

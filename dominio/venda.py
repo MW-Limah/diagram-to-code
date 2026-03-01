@@ -1,9 +1,10 @@
 from datetime import date
 from .cliente import Cliente
 from .produto import Produto
+from .base import Base
 
 
-class Venda:
+class Venda (Base):
     """Representa uma venda."""
 
     def __init__(self, cod_venda: int, cliente: Cliente, produto: Produto, data_venda: date, qtd_venda: int, preco_venda: float, subtotal_venda: float, forma_pagamento: str) -> None:

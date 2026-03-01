@@ -77,8 +77,9 @@ def main() -> None:
         data_compra=date.today()
     )
 
+
     # EXIBIÇÃO 
-    print("CLIENTE:", cliente)
+    print(produto)
  
     # TESTE DE MÉTODO 
     try:

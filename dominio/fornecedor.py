@@ -1,9 +1,10 @@
 from typing import List
 from .contato import Contato
 from .endereco import Endereco
+from .base import Base
 
 
-class Fornecedor:
+class Fornecedor (Base):
     """Representa um fornecedor."""
 
     def __init__(self, cod_fornecedor: int, razao: str, nome_fantasia: str, insc_estadual: str, cnpj: str) -> None:
