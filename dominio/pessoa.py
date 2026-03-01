@@ -2,9 +2,9 @@ from typing import List
 from .contato import Contato
 from .endereco import Endereco
 from datetime import date
+from .base import Base
 
-
-class Pessoa:
+class Pessoa(Base):
     """Representa uma pessoa do sistema."""
 
     def __init__( self, codigo: int, nome: str, data_nascimento: date, identidade: str) -> None:

@@ -1,4 +1,6 @@
-class Contato:
+from .base import Base
+
+class Contato(Base):
     """Representa contatos."""
 
     def __init__( self, tel1: str, tel2: str, cel1: str, cel2: str, email: str) -> None:

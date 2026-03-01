@@ -79,20 +79,12 @@ def main() -> None:
 
     # EXIBIÇÃO 
     print("CLIENTE:", cliente)
-    print("CONTATOS:", cliente.contatos)
-    print("ENDEREÇO:", cliente.endereco)
-
-    print("\nFORNECEDOR:", fornecedor)
-
-    print("\nVENDA:", venda)
-    print("COMPRA:", compra)
-
+ 
     # TESTE DE MÉTODO 
     try:
         cliente.tira_extrato()
     except NotImplementedError as e:
         print("\nMétodo:", e)
-
 
 if __name__ == "__main__":
     main()
