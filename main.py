@@ -79,7 +79,7 @@ def main() -> None:
 
 
     # EXIBIÇÃO 
-    print(cliente)
+    print(venda)
  
     # TESTE DE MÉTODO 
     try:
