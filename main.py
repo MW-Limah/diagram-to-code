@@ -4,23 +4,23 @@ from dominio import (Cliente, Funcionario, Contato, Endereco, Fornecedor, Produt
 
 
 def main() -> None:
-    # PRODUTO 
+     
     produto = Produto(
         cod_produto=1,
         nome="Notebook",
         valor=3500.0
     )
 
-    # CONTATO 
+     
     contato = Contato(
         tel1="1111-1111",
-        tel2="2222-2222",
+        tel2=None,
         cel1="99999-9999",
         cel2="88888-8888",
         email="teste@email.com"
     )
 
-    # ENDEREÇO 
+     
     endereco = Endereco(
         cep="12345-000",
         estado="SP",
@@ -30,7 +30,7 @@ def main() -> None:
         complemento="Apto 1"
     )
 
-    # CLIENTE 
+     
     cliente = Cliente(
         codigo=1,
         nome="João",
@@ -43,7 +43,8 @@ def main() -> None:
     cliente.contatos.append(contato)
     cliente.endereco = endereco
 
-    # FORNECEDOR 
+
+     
     fornecedor = Fornecedor(
         cod_fornecedor=10,
         razao="Empresa XYZ LTDA",
@@ -55,7 +56,22 @@ def main() -> None:
     fornecedor.contatos.append(contato)
     fornecedor.endereco = endereco
 
-    # VENDA 
+        
+    
+    funcionario = Funcionario(
+        codigo=2,
+        nome="Maria",
+        data_nascimento=date(1985, 5, 10),
+        identidade="987654321",
+        data_admissao=date(2020, 1, 15),
+        data_recisao=None
+    )
+
+    funcionario.contatos.append(contato)
+    funcionario.endereco = endereco
+
+
+     
     venda = Venda(
         cod_venda=100,
         cliente=cliente,
@@ -67,7 +83,7 @@ def main() -> None:
         forma_pagamento="Cartão"
     )
 
-    # COMPRA 
+     
     compra = Compra(
         cod_compra=200,
         nota_fiscal_compra="NF123",
@@ -76,12 +92,7 @@ def main() -> None:
         fornecedor=fornecedor,
         data_compra=date.today()
     )
-
-
-    # EXIBIÇÃO 
-    print(venda)
  
-    # TESTE DE MÉTODO 
     try:
         cliente.tira_extrato()
     except NotImplementedError as e:
