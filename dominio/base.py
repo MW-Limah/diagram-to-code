@@ -1,9 +1,17 @@
+import json
+
 class Base:
     """Classe base para entidades do domínio."""
 
     def __repr__(self) -> str:
-        atributos = ", ".join(
-            f"{chave}={valor}"
-            for chave, valor in self.__dict__.items()
+        def serialize(obj):
+            if hasattr(obj, "__dict__"):
+                return obj.__dict__
+            return str(obj)
+        
+        return json.dumps(
+            self.__dict__,
+            default=serialize,
+            indent=4,
+            ensure_ascii=False
         )
-        return f"{self.__class__.__name__}({atributos})"
