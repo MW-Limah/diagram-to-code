@@ -1,7 +1,7 @@
 from datetime import date
 class Venda:
     # Atributos
-    def __init__(self, cod_venda = str, cod_cliente_venda = str, data_venda = date, qtd_venda = int, preco_venda = float, subtotal_venda = float, forma_pagamento = str) -> None:
+    def __init__(self, cod_venda: str, cod_cliente_venda: str, data_venda: date, qtd_venda: int, preco_venda: float, subtotal_venda: float, forma_pagamento: str) -> None:
         self.cod_venda = cod_venda
         self.cod_cliente_venda = cod_cliente_venda
         self.data_venda = data_venda
