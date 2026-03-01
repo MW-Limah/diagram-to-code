@@ -5,5 +5,5 @@ from .endereco import Endereco
 from .fornecedor import Fornecedor
 from .funcionario import Funcionario
 from .produto import Produto
-from .vende import Vende
+from .venda import Venda
 from .compra import Compra
